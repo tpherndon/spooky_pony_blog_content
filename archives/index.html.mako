@@ -1,8 +1,0 @@
-<%inherit file="_templates/site.mako"/>
-<div id="content">
-<h1>Post Archives</h1>
-<ul>
-% for link, name, num_posts in bf.config.blog.archive_links:
-    <li><a href="${bf.util.site_path_helper(bg.config.blog.path, link)}/1" title="${name}">${name}</a>&nbsp;(${num_posts})</li>
-% endfor
-</div>

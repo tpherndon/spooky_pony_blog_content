@@ -13,9 +13,9 @@ import chronological
 
 blog = bf.config.controllers.blog
 
-
 def run():
     write_monthly_archives()
+    write_archive_list_page()
 
 
 def sort_into_archives():
@@ -36,3 +36,6 @@ def write_monthly_archives():
     for link, posts in blog.archived_posts.items():
         name = posts[0].date.strftime("%B %Y")
         chronological.write_blog_chron(posts, root=link)
+
+def write_archive_list_page():
+    bf.writer.materialize_template("archive_index.mako", "archives/index.html")

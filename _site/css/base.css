@@ -167,6 +167,12 @@ body > h1 {
 	background: rgb(60,97,158);
 }
 
+div#content {
+    background-color: #FFF;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
 article {
     padding-top: 24px;
     padding-bottom: 12px;
@@ -215,6 +221,12 @@ article section h3 {
 article section ul, article section ol {
     margin-left: 2em;
     margin-top: 1em;
+}
+
+hr {
+    margin-top: 32px;
+    margin-bottom: 0;
+    clear: both;
 }
 
 #comments_form {
@@ -269,6 +281,17 @@ nav ul li a {
     background: #2D377C;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+nav#page_turner ul li a {
+    padding: 0px;
+}
+
+nav#page_turner {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -3em;
+    width: 109.375%;
 }
 
 footer {
