@@ -1,0 +1,164 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    
+  <title>Spooky Pony</title>
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed" />
+<link rel="alternate" type="application/atom+xml" title="Atom 1.0"
+href="/feed/atom" />
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" media="all" href="/css/base.css"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0"/>
+<link rel="stylesheet" href="/css/pygments_murphy.css"/>
+
+
+  </head>
+  <body>
+      
+  <header>
+    <h1>Spooky Pony</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/archives/">Archives</a></li>
+        </ul>
+    </nav>
+</header>            
+
+
+          
+<div id="content">
+  
+  <article>
+    <header>
+      <h1>Writing Django Applications, Part 1</h1>
+    </header>
+    <aside>
+      <p>
+        <span class="run-in">Created: </span><time datetime="2010-11-04 15:00:55-04:00">Nov 04, 2010 03:00 PM</time><br/>
+        <span class="run-in">Updated: </span><time datetime="2010-11-09 16:18:53-05:00">Nov 09, 2010 04:18 PM</time><br/>
+        <span class="run-in">Author: </span>Peter Herndon<br/>
+        <span class="run-in">Categories: </span>
+
+<a href="/category/uncategorized">Uncategorized</a>
+      </p>
+    </aside>
+  <section class="article_content">
+    
+<h1>Introduction</h1>
+<p>I can't really claim to have huge amounts of experience with Django, seeing that I have written all of two applications using the framework.  However, as I work on a third application, I see a certain process emerging out of the work I've been doing.  The process is by no means formal, nor is it necessarily even correct, but in light of some discussion on the django-nyc group, I think that explaining how I go about developing a Django application may prove to be of some use to beginners.  What follows is very stream-of-consciousness, in the hopes that others may learn something from following the thought process.
+</p>
+<h2>Step 0: Create the Basic Project Infrastructure</h2>
+<p>The very first step is to set up your basic infrastructure.  Install a database engine, create a database and means of access, run django-admin.py startproject and django-admin.py startapp to set up your directory structure.  Get your directory structure under version control, and possibly set up whatever other project hosting you may need or want.  Google Code makes this last step particularly easy.</p>
+
+<h2>Step 1: Define Your Models</h2>
+<p>Here's where things really get rolling.  The first thing to do is to start thinking about what your application will be manipulating, your domain objects.  For our example, one application the Django-NYC group is considering building is a meeting organizer, similar to meetup.com or upcoming.org.  In this example, the domain objects are going to be such things as Event, Location, Organizer, and Attendee.  At a high level, these are the objects that our meeting organizer app will handle.  So how does this translate into code?  Well, we make a first pass at models.py, which winds up looking like this:
+</p>
+<pre><code>from django.db import models
+# Create your models here.
+class Event(models.Model):
+    pass
+
+class Location(models.Model):
+    pass
+
+class Organizer(models.Model):
+    pass
+
+class Attendee(models.Model):
+    pass
+</code></pre>
+<p>So far, there's really not a whole lot there.  But that's okay, since this process is iterative, and this is only our first pass.  While we're on our first pass, though, we might want to think for a moment about Organizer and Attendee.  Both of these models are going to be, basically, Users, so we probably want to set up these two models a bit differently.  The <a href="http://www.djangoproject.com/documentation/authentication/#storing-additional-information-about-users" title="Django Authentication Documentation">canonical way</a> to add information to the built-in User model is to create a single profile model that encapsulates the additional fields and methods for the entire site.  In your settings module, you then point to that profile model and set it as your site-wide user profile.  So, our initial idea to have separate Organizer and Attendee models isn't going to work, if we want them both to be able to log in and use the application.  Instead, we'll need to combine the models, and differentiate them elsewhere.  Since I haven't even started to differentiate them, now is definitely a good time to combine these models.  For our next pass, we delete the Organizer and Attendee classes, and replace them with the following:
+</p>
+<pre><code>class MeetingProfile(models.Model):
+    pass
+</code></pre>
+<p>Our iterations are small, so our improvements are not going to be too large in any given pass.
+</p>
+
+<h2>Step 2:  Refine Your Models</h2>
+<p>Let's look at Location first, as it is arguably the easiest to think about (barring i18n issues).  A Location has a name, and that name will provide a slug field.  Locations have from one to three address lines, a city field, a state field, and a zip/postal code.  They may have a room number, or a floor -- some refinement on the address that is usually held in the second or third address line.  At this point, I don't think we need to get more specific than that.  Locations also should have a description field, for whatever random notes need to appear.
+</p>
+<p>Since Locations are naturally given to mapping, we will want some means of storing information that allows us to connect our meetings app to an online map provider.  Given that I am Google's bitch, I naturally lean towards Google Maps, but since I don't know anything about geolocation, or that spiffy new standard Google came up with recently for specifying location coordinates, I'm going to punt on this feature for the moment.  At some point later, I'll come back to it.  I need to do my homework on it first, though, so we'll save it for another iteration.<br />
+</p>
+<p>Locations can be used for more than one Event, but there's some complexity there that needs some thought we haven't given it yet.  So we'll come back to this part, too.  Just to give a quick hint, though, a given Location can often host multiple Events, and a given Event can be held at multiple Locations, given some teleconferencing.  This implies a ManyToMany relationship.  A given Event can be held at multiple Locations also, if the Event recurs.  Likewise, if a Location is not specified precisely enough, then that Location can potentially host multiple Events at the same time.  Hmmm, this line of thinking may wind up in an additional model -- something like Resource, which is a generalization of e.g. a conference room, a projector, a table, chairs, snacks, etc.  And a given Resource can be required or optional.
+</p>
+<p>So much for a <em>quick</em> hint.<br />
+</p>
+<p>Locations also have one or more hosts, where a host is someone who is responsible for the Location.  That person may or may not attend, and may or may not be an Event organizer, so these are some complexities we'll want to keep in mind for later.  In the meantime, we have the following Location class (<em>N.B.</em>: I have deliberately not set the field details yet):
+</p>
+<pre><code>class Location(models.Model):
+    name = models.CharField()
+    slug = models.SlugField()
+    description = models.TextField()
+
+    address1 = models.CharField()
+    address2 = models.CharField()
+    address3 = models.CharField()
+    city = models.CharField()
+    state = models.CharField()
+    zipcode = models.CharField()
+
+    # punted for now
+    # coordinates = models.CharField()
+
+    # punted for now
+    # events = models.ManyToManyField(Event)
+    hosts = models.ManyToManyField(MeetingProfile)
+</code></pre>
+<p>I'm going to skip Resources for now, as I'm not convinced they are necessary.  While they may help with planning a meeting, we also don't want to bog down our users with detail that may be unnecessary.  This kind of feature is something I'd prefer to put in front of some usability testers, and have them figure out how useful it is.  Why guess, when you can know, right?<br />
+</p>
+<p>Let's take a look at the MeetingProfile class.  For one thing, we have to follow the rules for getting the profile to work with the User model.  So, we need a ForeignKey to the User model.  Next, we want to add some contact information.  I'm thinking, for an event organizer, we'll likely want a phone number, preferably a cell phone, in order to contact the organizer in case of emergency.  I think we'll need a description field, and we may want to add in an image field at some point, though that should be for a later version of the app.  Dealing with images means either integrating one of the many Django image manipulation applications, or reinventing the wheel for our own purposes.  I'll pass on this feature for now, as it stands to be a large post on its own.  We also want to link this model to Events and Locations, but I think the link should be on the Event and Location objects, rather than on the MeetingProfile.  After all, Events have organizers and attendees, not the other way around, and similarly Locations have hosts.  So our end result is fairly short:
+</p>
+<pre><code>class MeetingProfile(models.Model):
+    user = models.ForeignKey(User, unique=True)
+    phone = models.PhoneNumberField()
+    description = models.TextField()
+
+    # punted for now
+    # image = models.ImageField()
+</code></pre>
+<p>Finally, consider the Event model.  An Event should have a name, a slug and a description, a set of organizers and a set of attendees.  In addition, an Event should really map to <a href="http://www.ietf.org/rfc/rfc2445.txt" title="IETF iCalendar Specification">RFC 2445</a>, the iCal specification.  There are a couple of Python iCal libraries out there, and we'll be picking one to use.  But right now, I'm going to duck and cover, and leave the Event model for part 2.  Stay tuned, this series will continue shortly.
+</p>
+
+  </section>
+</article>
+
+  <hr/>
+<nav id="page_turner">
+<ul>
+<li>
+<a href="../1"> 
+« Previous Page
+</a>
+</li>
+<li>&nbsp;&nbsp; -- &nbsp;&nbsp;</li>
+<li>
+Next Page »
+</li>
+</ul>
+</nav>
+</div>
+
+      
+  <footer>
+    <section>
+        <p class="copyright">Copyright &copy; 2010 Peter Herndon</p>
+    </section>
+</footer>
+
+
+  </body>
+</html>
+
+
+
+

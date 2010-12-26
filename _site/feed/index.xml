@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     >
+  <channel>
+    <title>Spooky Pony</title>
+    <link>http://spookypony.com</link>
+    <description>Grumblings of an occasional developer and sys-admin</description>
+    <pubDate>Sun, 26 Dec 2010 20:22:28 GMT</pubDate>
+    <generator>Blogofile</generator>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>Presentations</title>
+      <link>http://spookypony.com/2010/11/presentations</link>
+      <pubDate>Tue, 09 Nov 2010 16:08:47 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/presentations</guid>
+      <description>Presentations</description>
+      <content:encoded><![CDATA[
+<h1>Presentations</h1><p>I'm finally getting around to posting up some of my presentations.  They are all licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">CC-BY-SA-NC.</a></p><h2>Open Repositories 09</h2><p>At the <a href="https://or09.library.gatech.edu/" title="Open Repositories 09">Open Repositories 09</a> conference, I presented on my current work writing a Django UI for <a href="http://www.fedora-commons.org/" title="FEDORA Digital Object Repository">Fedora</a>.  I'm making that presentation available as both the original Keynote 09 file and as a PDF.</p><ul> <li>     <a href="http://spookypony.com/media/OR2009_presentation.key" title="Keynote version">OR2009_presentation.key</a> <em>Keynote 09</em> </li> <li>     <a href="http://spookypony.com/media/OR2009_presentation.pdf" title="PDF version">OR2009_presentation.pdf</a> <em>PDF</em> </li></ul><h2>PyCon09</h2><p>At PyCon09 I gave a lightning talk on my work on both the <a href="http://synapse.mskcc.org/" title="Synapse Bibliography Database">Synapse</a> bibliography web app, and on the Django repository UI.  That presentation is available in Keynote 09 format only (for the moment), here:</p><ul> <li>     <a href="http://spookypony.com/media/PyconLightningTalk.key" title="PyCon09 Lightning Talk">PyconLightningTalk.key</a> <em>Keynote 09</em> </li></ul><h2>Django-NYC</h2><p>For our local Django Users' Group, I've presented twice and given a lightning talk.  The presentations cover integrating <a href="http://code.google.com/p/django-solr-search/" title="Solango Django application at Google Code">Solango</a> into your Django project, and how to build full-field search using Q objects.  The lightning talk was on the current state of the Django-NYC group project, <a href="http://code.google.com/p/django-issues" title="Django-Issues at Google Code">django-issues</a>.  The Solango presentation is in Keynote 09 format, while the other two are in PowerPoint .ppt format.</p><ul> <li>     <a href="http://spookypony.com/media/Solango.key" title="Solango presentation in Keynote 09 format">Solango presentation</a> <em>Keynote 09</em> </li> <li>     <a href="http://spookypony.com/media/django_search.ppt" title="Search for Django in PowerPoint format">Search using Q</a> <em>PowerPoint</em> </li> <li>     <a href="http://spookypony.com/media/django-issues.ppt" title="State of django-issues in PowerPoint format">State of django-issues</a> <em>PowerPoint</em> </li></ul><h2>MSKCC Information Systems Expo</h2><p>Finally, I taught a couple of hour-long seminars on the value of newsfeeds and feed readers for keeping on top of the Internet information flow at the 2008 IS Expo, an internal event.  I got a fairly good reception, though really poor pre-registration, but the average person at MSKCC has never heard of newsfeeds and has no clue as to the potential value.  This topic may seem so very old news to all my readers (yes, all 3 of you), but that shows you how far ahead of the curve we technologists are compared to the majority of the world.  Of course, some of us are abandoning newsfeeds in favor of Twitter.  Personally, I prefer a mixed model.  Anyway, I'm making that presentation available in Powerpoint 2007 .pptx format here:</p><ul> <li>     <a href="http://spookypony.com/media/Weblogs_NewsFeeds.pptx" title="Weblogs and Newsfeeds seminar in Powerpoint 2007 format">Weblogs_NewsFeeds.pptx</a> <em>Powerpoint 2007</em> </li></ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Kidding myself</title>
+      <link>http://spookypony.com/2010/11/kidding-myself</link>
+      <pubDate>Tue, 09 Nov 2010 16:04:19 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/kidding-myself</guid>
+      <description>Kidding myself</description>
+      <content:encoded><![CDATA[
+<p>Who am I kidding?  Not myself.  I've got too much on plate right now.  I'll get around to a redesign and re-implementation when I get a spare moment.  Right now, I'm working on learning:</p><ul><li>SOAP</li><li>the (FEDORA)[http://www.fedora-commons.org] SOAP API-A and API-M</li><li>FOXML</li><li>Bayesian analysis</li><li>Image analysis</li><li>CouchDB</li><li>Erlang</li><li>and more JavaScript</li></ul><p>I'll get around to learning enough about the new Django 1.0 comments implementation to rebuild the site engine, and spruce up the design, at um, some unspecified point in the future.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Reimplementation</title>
+      <link>http://spookypony.com/2010/11/reimplementation</link>
+      <pubDate>Tue, 09 Nov 2010 15:59:29 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/reimplementation</guid>
+      <description>Reimplementation</description>
+      <content:encoded><![CDATA[
+<p>I look at my current blog, the words you currently read, and I find myself not liking the design very much.  That is, I love my pony picture, and the general layout is simple enough.  I'm not quite as hard-nosed about the simplicity thing as, say, <a href="http://tomayko.com/" title="Ryan Tomayko's personal site">Ryan Tomayko</a> or <a href="http://www.b-list.org/" title="James Bennett's personal site">James Bennett</a>, but I'm really an un-fan of those cluttered sites where you can't find the content due to all the junk on the page.  And I'm not design-savvy enough to build a web site that has lots of cool pretty stuff on it while still making it easy to find the content.</p><p>Be that as it may, the current design has issues.  For one thing, it's based on a static width grid, and it just doesn't work right.  I want a fluid layout, a dynamic number of columns based on width, full use of available space, and I <em>still</em> want my pony.  On top of that, I'm running a pre-1.0 version of Django, and the site is missing a lot of the functionality I'd like to have.</p><p>In short, time for a redesign. </p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>No Update to Django 1.0 Yet</title>
+      <link>http://spookypony.com/2010/11/no-update-to-django-10-yet</link>
+      <pubDate>Tue, 09 Nov 2010 15:57:47 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/no-update-to-django-10-yet</guid>
+      <description>No Update to Django 1.0 Yet</description>
+      <content:encoded><![CDATA[
+<p>I have not yet had the chance to sit down and update the site's blog engine to Django 1.0 yet.  Instead, I've been busy working on <a href="http://code.google.com/p/django-issues" title="Django-Issues website">django-issues</a>.  I hope to work on the update in, um, a while.</p><p><em>shrug</em>  Whattaya gonna do, right?</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>I want a new car</title>
+      <link>http://spookypony.com/2010/11/i-want-a-new-car</link>
+      <pubDate>Tue, 09 Nov 2010 15:56:25 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/i-want-a-new-car</guid>
+      <description>I want a new car</description>
+      <content:encoded><![CDATA[
+<p>I want a new car.  It should basically be a Subaru Outback (my current car), but it should be all-electric.  It should have a top speed of at least 100mph, a range of at least 250 miles per charge, should indeed be all-wheel-drive, and should be as silent as possible.  Noise, after all, is energy wasted on vibration.</p><p>Further, it should not cost more than about $32,000 base price.  I'm willing to pay a slight premium over the cost of a gasoline-powered version, but not more than about $2-4k.</p><p>So why does this car not exist?  The technology exists to make it possible, but the manufacturers of this nascent niche are currently concentrating on high-margin, low-volume sports cars.  They don't believe that a market exists for all-electric "normal" cars, practical cars.</p><p>Short of the above, I'm willing to accept a car that gets about 50mpg on the highway, a not unreasonable-goal.  The Honda Civic hybrid approaches that, as does the Prius.  For that matter, Subaru has a diesel Outback that gets about 44mpg, over in Europe.  They just need to clean it up a bit to meet the US emissions laws.  No small matter, of course, but doable. </p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Outage for Updates to Django 1.0</title>
+      <link>http://spookypony.com/2010/11/outage-for-updates-to-django-10</link>
+      <pubDate>Tue, 09 Nov 2010 15:54:09 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/outage-for-updates-to-django-10</guid>
+      <description>Outage for Updates to Django 1.0</description>
+      <content:encoded><![CDATA[
+<p>Expect <a href="http://spookypony.com/" title="Spooky Pony website">Spooky Pony</a> to be down for a while as I upgrade to <a href="http://www.djangoproject.com" title="Django Framework">Django 1.0</a>.  NFA, new comments, file uploads, plus best practices a la <a href="http://b-list.org/" title="B-List:  James Bennett's Website">James Bennett</a>'s Practical Django Projects.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>New Job</title>
+      <link>http://spookypony.com/2010/11/new-job</link>
+      <pubDate>Tue, 09 Nov 2010 15:52:12 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/new-job</guid>
+      <description>New Job</description>
+      <content:encoded><![CDATA[
+<p>I haven't written in quite a while, for which I apologize.  It turns out that I'm not really a writer.  By which I mean, I don't have a burning need to write, or else I'll just fall over and die.  Not to knock it, that kind of compulsion is what gets things done in any given field, and I do have that compulsion in other areas, just not writing.</p><p>Which means that writing, for me, is not an end in itself, it is a means to an end.</p><p>In the meantime, I have some news!  I have transferred back to the Open Systems Department here at <a href="http://www.mskcc.org" title="Memorial Sloan-Kettering Cancer Center">MSKCC</a>, where I am once again a Senior Unix Systems Administrator.  I will continue working on <a href="http://code.google.com/p/synapse-bibliography/" title="Synapse Django bibliography application">Synapse</a> in my spare time, while my main focus, at least initially, will be in creating web application front-ends for the <a href="http://www.fedora-commons.org" title="Fedora Repository Project">FEDORA</a> Repository project, for internal use.  I will, of course, be using <a href="http://www.djangoproject.com/" title="Django Web Framework">Django</a> as my preferred solution.  Unfortunately, I inherit an extremely complex web front-end written in Java as my pilot project.  The web app, <a href="http://www.muradora.org" title="Muradora">Muradora</a>, is reasonably well-written, but my Java is, um, rusty.  Happily, I'm getting back into the swing of things (no pun intended, we're using JSPs) fairly quickly.  On a note of personal interest, the Fedora repository has SOAP interfaces, so I'm tasked with learning SOAP reasonably quickly.  Does anyone have any pointers as to some basic tutorials, preferably in Python?</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Relative Paths in Django</title>
+      <link>http://spookypony.com/2010/11/relative-paths-in-django</link>
+      <pubDate>Tue, 09 Nov 2010 15:48:55 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/relative-paths-in-django</guid>
+      <description>Relative Paths in Django</description>
+      <content:encoded><![CDATA[
+<p>A handy link to an article on how to set up one's Django settings.py file, to allow for relative paths:</p><p><a href="http://rob.cogit8.org/blog/2008/Jun/20/django-and-relativity/" title="Link to 'Django and Relativity'">Django and Relativity</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Writing Django Applications, Interim Thoughts</title>
+      <link>http://spookypony.com/2010/11/writing-django-applications-interim-thoughts</link>
+      <pubDate>Tue, 09 Nov 2010 15:44:33 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/writing-django-applications-interim-thoughts</guid>
+      <description>Writing Django Applications, Interim Thoughts</description>
+      <content:encoded><![CDATA[
+<h1>Some Perspective</h1><p>One of the wonderful things that comes from a few days spent doing other things is a certain amount of clarity and perspective that you get when you return to whatever-it-was.  In this case, I've realized that the Event model is both too complex and too cool for school.  In short, I should absolutely <strong>not</strong> build iCal functionality into the Event model.  Instead, what we ought to do is extract this functionality into a <em>different</em> Django application.</p><p>To that end, I'm going to start building django-ical.  The concept is similar to <a href="http://jtauber.com" title="James Tauber: Journeyman of Some">James Tauber's</a> <a href="http://jtauber.com/django-atompub" title="Django-atompub application">django-atompub</a>, where django-ical requires you to define certain methods that allow it to provide the necessary data to build ICS files.  Those methods will extract the data from whatever model you choose to provide to it.  The ICS files will then be available for download from the site in which they are embedded.</p><p>My goal is to build a working CalDAV application for Django.  Ambitious, yes, but... truth told, I've had a bug for <em>years</em> about the paucity of complete groupware stacks that are easy to use.  A single CalDAV server implementation isn't really the groupware stack I've been dreaming of, but it might be a step in the right direction.</p><p>The point, though, for the django-meeting application, is that Event need not define any iCal related functionality.  Instead, I need to make sure the necessary data exist for each Event, which means the proper field definitions.  Then, write the necessary views and wire that up to django-ical.  And, errrrr, actually <em>write</em> django-ical...</p><p>Again, more to come later.</p><p><em>This post is a continuation of my earlier <em></em><a href="/weblog/entries/2008/jun/01/writing-django-applications-part-1/" title="Writing Django Applications, Part 1">entry</a><em></em> on writing Django applications.</em></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Movie Review Kung Fu Panda</title>
+      <link>http://spookypony.com/2010/11/movie-review-kung-fu-panda</link>
+      <pubDate>Tue, 09 Nov 2010 15:38:48 EST</pubDate>
+      <category><![CDATA[Uncategorized]]></category>
+      <guid isPermaLink="true">http://spookypony.com/2010/11/movie-review-kung-fu-panda</guid>
+      <description>Movie Review Kung Fu Panda</description>
+      <content:encoded><![CDATA[
+<p>My wife and I, and our good friend Bryant Frazer, proprietor of <a href="http://www.deep-focus.com" title="Deep Focus">Deep Focus</a> saw <a href="http://www.kungfupanda.com" title="Kung Fu Panda Official Site">Kung Fu Panda</a> last night.  The movie was fun and I enjoyed it, but it lacked a certain something.</p><p>For one thing, Po the Panda, Jack Black's title character, performed no kung fu until, oh, about an hour into the film.  In addition, when one of the kung fu masters <em>did</em> perform, the animators chose to make the moves so fast you can't actually see them, unless you happen to be a five year old hopped on Ritalin and sugar.</p><p>Finally, there was a distinct lack of local color and flavor to the movie.  I got <em>hints</em> of flavor, primarily from wonderful performances by James Hong as Po's adoptive father, Mr. Ping, and Randall Duk Kim as Master Oogway, but mostly I was smacked in the face non-stop with Jack Black.  And while Jack is a fine comedian, I'm not sure he really has the ability to carry a movie on his own.  I'm consistently disappointed by Jack, every movie of his I see I feel it <em>almost</em> hits the mark, but not quite.  There's really not quite enough substance to his performances.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

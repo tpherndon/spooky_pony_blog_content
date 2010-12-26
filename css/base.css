@@ -1,0 +1,349 @@
+/*
+	Less Framework 2, version 2.0
+	by Joni Korpi
+	-----------------------------
+	http://lessframework.com
+*/
+
+
+
+/* 
+	Resets
+	------
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, q, small, strong, sub, sup, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, video, object {
+	display: block;
+}
+
+a img {border: 0;}
+
+figure {position: relative;}
+figure img {width: 100%;}
+
+
+
+/*
+	Typography presets
+	------------------
+*/
+
+body, aside h1, .sidenote h1, aside, .sidenote, blockquote{font-family:Arial, sans-serif;}
+h1, h2, h3, h4, h5, h6, .header, .subheader, .head, .subhead, .pullquote, .kicker{font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;}
+
+
+.gigantic {
+	font-size: 105px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 68px;
+	line-height: 72px;
+	letter-spacing: -2px;
+}
+
+.large, h2 {
+	font-size: 42px;
+	line-height: 48px;
+	letter-spacing: -1px;
+}
+
+.big, h3 {
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.normal, body {
+	font: 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+    font-style: italic;
+} 
+
+
+::selection 	 {background: rgb(255,255,0);}
+::-moz-selection {background: rgb(255,255,0);}
+
+h4{font-weight:bold;}
+h3, h4, h5, h6, .kicker, .pullquote{font-weight:200;}
+h1{font-weight:bold;}
+ul{list-style-position:outside;list-style-type:disc;}
+ol{list-style-position:outside;list-style-type:decimal;}
+blockquote{font-style:italic;}
+blockquote:before {content: "“";font-size:4em;text-indent:-.6em;margin-top:.15em;float:left;}
+cite{display:block;text-transform:uppercase;letter-spacing:1px;font-style:normal;font-weight:bold;font-size:smaller;margin-top:1.8em;}
+cite:before{content:"–";float:left;font-size:1.5em;text-indent:-1.3em;font-weight:bold;margin-top:-.1em;}
+pre{margin:1.5em;}
+dl{margin:1.45em 0;/*border-top:1px dotted #999;border-bottom:1px dotted #999;*/}
+dt{word-spacing:.2em;border-bottom:1px dotted #999;margin-top:1.5em;font-weight:bold;text-transform:uppercase;font-size:.9em;letter-spacing:1px;}
+dt:before{content:"⟩";font-size:1.25em;text-indent:-1em;float:left;font-style:none;font-weight:normal;}
+dd{font-style:italic;font-size:.9em;margin-bottom:1.65em;}
+abbr{text-transform:uppercase;font-size:.9em;}
+p {margin-bottom:0;hyphenate: auto;hyphenate-before:2;hyphenate-after:3;hyphenate-lines: 3;orphans:4}
+
+/*Compositional Elements*/
+/*.kicker{font-size:1.33em;line-height:1.693em;font-style:italic;margin:1.65em 0 -.15em;}*/
+.kicker{font-size:1.13em;line-height:1.693em;font-style:italic;margin-bottom: -.15em;}
+.run-in{font-weight:bold;}
+.superscript{font-family:arial, sans-serif;vertical-align:super;font-size:75%;text-transform:lowercase;font-variant:small-caps;letter-spacing:.1em;line-height:0em;}
+.subscript{font-family:arial, sans-serif;vertical-align:sub;font-size:75%;text-transform:lowercase;font-variant:small-caps;letter-spacing:.1em;line-height:0em;}
+a.superscript, a.subscript{text-decoration:none;}
+aside, .sidenote{font-size:.83em;font-style:italic;}
+aside h1, .sidenote h1{text-transform:uppercase;margin:0;font-size:1em;line-height:1.85em;font-style:italic;font-weight:bold;}
+aside p, .sidenote p{line-height:1.85em;margin:0;}
+aside p + p, .sidenote p + p{margin:1.85em 0;}
+aside ul, aside ol, .sidenote ul, .sidenote ol{margin-top:1.85em;}
+.pullquote{margin:.45em .5em 0 0;padding-top:.4em;line-height:1.5em;display:block;float:left;font-size:2em;width:50%;/*border-bottom:1px solid black;*/border-top:.15em solid black;}
+.footnote{border-top:1px solid black;font-size:.75em;margin-top:3.5em;}
+.footnote li{margin:.6em 0 2em;}
+.caption{font-size:.8em;font-style:italic;margin:.6em 0 -.2em;}
+
+/*
+	Default 5-column, 768 px layout for iPads, netbooks, and IE
+	(All other layouts inherit styles from this layout)
+	-----------------------------------------------------------
+	1      2      3      4      5     
+	120px  264px  408px  552px  696px   (24px gutters)
+*/
+
+body {
+	background: rgb(232,232,232);
+	padding: 60px 36px 0;
+	width: 696px;
+    position: relative;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+}
+
+body > header {
+    margin-bottom: 12px;
+}
+
+body > header h1 {
+    text-align: center;
+    background: #2D377C;
+    color: #FFFFFF;
+    font-style: italic;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+}
+header h2 {
+    margin-top: 24px;
+}
+
+body > h1 {
+    text-align: center;
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: -1px;
+    padding: 30px 0;
+}
+
+#example {
+	height: 600px;
+	background: rgb(60,97,158);
+}
+
+div#content {
+    background-color: #FFF;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+article {
+    padding-top: 24px;
+    padding-bottom: 12px;
+    clear: both;
+}
+
+article > header h1 {
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: 0px;
+}
+
+article aside {
+    width: 220px;
+    float: right;
+    clear: both;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+article section {
+    width: 552px;
+}
+
+article section h1 {
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: 0px;
+    margin: 8px;
+}
+
+article section h2 {
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    margin: 8px;
+}
+
+article section h3 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin: 8px;
+}
+
+article section ul, article section ol {
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+hr {
+    margin-top: 32px;
+    margin-bottom: 0;
+    clear: both;
+}
+
+#comments_form {
+    margin-top: 1.5em;
+    border-top: 1px dotted #999;
+}
+
+#comments_form h2 {
+    font-size: 1em;
+    font-style: italic;
+}
+
+section h1 {
+    font-size: 2em;
+    letter-spacing: -1px;
+}
+
+nav {
+    background: #2D377C;
+    color: #FFFFFF;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    clear: left;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    text-align: center;
+}
+
+nav ul li {
+    display: block;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 50%;
+}
+
+nav ul li a {
+    display: block;
+    margin: 0 0 0 1px;
+    padding: 3px 10px;
+    background: #2D377C;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav#page_turner ul li a {
+    padding: 0px;
+}
+
+nav#page_turner {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -3em;
+    width: 109.375%;
+}
+
+footer {
+    padding: 20px 0 20px 0;
+    background: #2D377C;
+    color: #FFFFFF;
+    text-align: center;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    clear: both;
+}
+
+/* 
+	2-column, 320 px layout for smartphones
+	---------------------------------------
+	1      2
+	120px  264px   (24px gutters)
+*/
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		padding: 48px 28px 0;
+		width: 264px;
+	}
+	
+}
+
+
+
+/* 
+	8-column, 1224 px layout for desktops and laptops
+	------------------------------------------------------------------------
+	1      2      3      4      5      6      7      8
+	120px  264px  408px  552px  696px  840px  984px  1128px   (24px gutters)
+*/
+
+@media only screen and (min-width: 1224px) {
+	
+	body {
+		padding: 72px 48px 0;
+		width: 1128px;
+	}
+
+    article section {
+        /*width: 840px;*/
+        width: 970px;
+    }
+	
+}
+
