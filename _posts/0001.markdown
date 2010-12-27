@@ -1,0 +1,35 @@
+---
+date: 2010/12/27 16:27:00
+title: Rebooting the Blog
+author: Peter Herndon
+categories: Python, Django, Blogofile
+draft: false
+---
+I'm restarting blogging. I've missed writing, and while I've been tweeting
+[@tpherndon](http://twitter.com/#!/tpherndon), that is no substitute
+for proper long-form writing. No room for depth or creativity.
+
+As my [About](/about/) page mentions, I'm switching from
+[Django](http://www.djangoproject.com/) to
+[Blogofile](http://www.blogofile.com), and thus from a dynamic web application
+to a static site generator. The entertaining part is that I'd already written
+the Django app and gotten it spot-on perfect when I decided to scrap the whole
+thing and start over with Blogofile.
+
+My reasons for doing so are straight-forward enough. I don't really want to be
+responsible for maintaining the security of a web site. That's the reason I
+took down the original Django-based blog on this site. Django popped a major
+security update, and I found myself faced with a need to rewrite the blog
+engine to work with the latest version of Django.  I hadn't posted in a year or
+so at that point, and at the time I had neither the available time nor desire
+to write, so I simply shut down the blog. With Blogofile, I'm not running a
+database or a web app. I'm just running a standard web server serving static
+files.
+
+Blogofile also gives me the ability to write on any computer, and allows me to
+write while offline, given I've pulled down a recent copy of the blog
+repository from
+[Github](https://github.com/tpherndon/spooky_pony_blog_content).
+
+I'm looking forward to writing now. It has been a while, so I've built up some
+steam.

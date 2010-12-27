@@ -94,7 +94,7 @@ dt{word-spacing:.2em;border-bottom:1px dotted #999;margin-top:1.5em;font-weight:
 dt:before{content:"⟩";font-size:1.25em;text-indent:-1em;float:left;font-style:none;font-weight:normal;}
 dd{font-style:italic;font-size:.9em;margin-bottom:1.65em;}
 abbr{text-transform:uppercase;font-size:.9em;}
-p {margin-bottom:0;hyphenate: auto;hyphenate-before:2;hyphenate-after:3;hyphenate-lines: 3;orphans:4}
+p {margin-bottom:1em;hyphenate: auto;hyphenate-before:2;hyphenate-after:3;hyphenate-lines: 3;orphans:4}
 
 /*Compositional Elements*/
 /*.kicker{font-size:1.33em;line-height:1.693em;font-style:italic;margin:1.65em 0 -.15em;}*/
